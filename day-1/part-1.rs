@@ -23,8 +23,6 @@ fn main() {
         // find first number in word
         let (mut first, mut second) = (0, 0);
         let mut found = false;
-        let mut sum = 0;
-        let mut array: Vec<u32> = Vec::new();
 
         for (i, c) in word.chars().enumerate() {
             if c.is_digit(10) {
@@ -39,7 +37,6 @@ fn main() {
             }
         }
         let concat = first.to_string() + &second.to_string();
-
         println!("{} + {} = {}", first, second, concat);
         total += concat.parse::<u32>().unwrap();
     }
